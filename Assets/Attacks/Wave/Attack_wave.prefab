@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaSize: {x: 6.5, y: 4}
   offsetRange: {x: 0, y: 0}
-  targetOffset: 1.375
+  targetOffset: 1.4
   inwaveAngle: 0.06
   inwaveSpeed: 1.4
   curves:
@@ -169,12 +169,15 @@ MonoBehaviour:
   fillblock: {fileID: 6043154920752458043, guid: 3c9ddc3a6a60a5c49a638291570bba2f,
     type: 3}
   waveCords:
-  - amplitude: 0.08
+  - amplitude: 0.09
     frequency: 0.3
-    movementSpeed: 1
+    movementSpeed: 1.1
   - amplitude: 0.04
-    frequency: 1.1
-    movementSpeed: 0.3
+    frequency: 1.2
+    movementSpeed: 0.4
+  - amplitude: 0.02
+    frequency: 0.1
+    movementSpeed: 0.2
 --- !u!120 &8364629784817285028
 LineRenderer:
   m_ObjectHideFlags: 0

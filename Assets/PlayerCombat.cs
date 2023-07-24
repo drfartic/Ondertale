@@ -7,6 +7,7 @@ using DG.Tweening;
 public class PlayerCombat : MonoBehaviour
 {
     public static PlayerCombat Instance;
+    private PlayerHealth playerHealth;
 
     public float speed;
     public Vector2 areaSize;
@@ -28,6 +29,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         linewidth = 1f / boxPpu;
+        playerHealth = GetComponent<PlayerHealth>();
         StartCoroutine(DoTick());
     }
 
@@ -35,10 +37,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if (doTickDamage && canMove)
         {
-            Camera.main.DOShakePosition(0.1f, 0.035f, 10, 90, false);
+            playerHealth.OnDamageReceive(1.5f);
+            Camera.main.DOShakePosition(0.075f, 0.035f, 10, 90, false);
         }
         
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.075f);
         StartCoroutine(DoTick());
 
     }
